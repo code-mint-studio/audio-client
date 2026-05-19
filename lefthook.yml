@@ -1,0 +1,15 @@
+pre-commit:
+  parallel: false
+
+  commands:
+    format:
+      stage_fixed: true
+      run: dart format .
+
+    analyze:
+      run: flutter analyze
+
+pre-push:
+  commands:
+    tests:
+      run: flutter test

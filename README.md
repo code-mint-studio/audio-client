@@ -25,7 +25,7 @@ Mục tiêu của guideline này:
 # 2. Core Tech Stack
 
 ## State Management
-- Riverpod
+- Riverpod + Riverpod Generator
 
 ## Networking
 - Dio
@@ -67,14 +67,23 @@ lib/
 │   └── utils/
 │
 ├── features/
-│   ├── auth/
-│   ├── home/
-│   ├── library/
-│   ├── player/
-│   ├── playlist/
-│   ├── search/
-│   ├── onboarding/
-│   └── profile/
+    ├── auth/
+    ├── onboarding/
+    ├── home/
+    ├── explore/
+    ├── search/
+    ├── audiobook/
+    ├── player/
+    ├── playlist/
+    ├── library/
+    ├── downloads/
+    ├── history/
+    ├── bookmarks/
+    ├── subscription/
+    ├── notifications/
+    ├── profile/
+    ├── settings/
+    └── analytics/
 │
 ├── shared/
 │   ├── widgets/
@@ -120,11 +129,28 @@ UI
 ↓
 Controller / Notifier
 ↓
+Usecase
+↓
 Repository
 ↓
 Data Source
 ↓
 API / Local DB
+```
+
+# Example Flow
+```txt
+HomeScreen
+↓
+HomeController
+↓
+GetHomeStories
+↓
+HomeRepository
+↓
+HomeRemoteDatasource
+↓
+Dio API
 ```
 
 ---
@@ -450,12 +476,23 @@ Bắt buộc dùng:
 
 ---
 
-## Responsive
+## Adaptive & Responsive UI
 
-UI phải support:
-- small devices
-- tablets
-- landscape
+UI must support:
+- Small phones
+- Tablets
+- Portrait & Landscape
+
+Follow Flutter adaptive/responsive principles:
+- Use responsive layouts (`LayoutBuilder`, `MediaQuery`, `Expanded`, `Flexible`)
+- Avoid hard-coded sizes
+- Support adaptive navigation/layouts by screen size
+- Prevent overflow on all screen sizes/orientations
+
+Breakpoints:
+- Compact: `< 600dp`
+- Medium: `600–840dp`
+- Expanded: `> 840dp`
 
 ---
 

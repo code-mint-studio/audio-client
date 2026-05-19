@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "638694742051",
+    "project_id": "audio-streaming-6789",
+    "storage_bucket": "audio-streaming-6789.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:638694742051:android:5de1b2d70386c9ff637996",
+        "android_client_info": {
+          "package_name": "com.example.audio_client"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiOpm8L246cDPVsENYYskwwtqqA0Nx5yw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
