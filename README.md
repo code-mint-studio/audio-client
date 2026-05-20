@@ -694,6 +694,7 @@ refactor:
 chore:
 docs:
 test:
+test:
 ```
 
 Ví dụ:
